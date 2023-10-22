@@ -1,5 +1,5 @@
 streamlit == 1.27.2
-streamlit_extras == 0.3.4
-streamlit_space == 0.1.5
-st_pages == 0.4.5
-streamlit_image-select == 0.6.0
+streamlit-extras == 0.3.4
+streamlit-space == 0.1.5
+st-pages == 0.4.5
+streamlit-image-select == 0.6.0
