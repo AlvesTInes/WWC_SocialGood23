@@ -1,6 +1,6 @@
 # WWC_SocialGood23 - Food Waste Wizard 🪄🧙
 
-[WWCode Hackathon For Social Good](https://hopin.com/events/wwcode-hackathon-for-social-good/registration) is a global online hackathon (Oct.12th - Nov. 14th, 2023) 🌍. Where you can learn and develop a project for the social good.
+[WWCode Hackathon For Social Good](https://hopin.com/events/wwcode-hackathon-for-social-good/registration) is a global online hackathon (Oct.12th - Nov. 4th, 2023) 🌍. Where you can learn and develop a project for the social good.
 Our solution is an Educational Quiz Application - *Food Waste Wizard*. 
 
 ## Challenge Statement 📜
@@ -9,7 +9,7 @@ Food waste is a pressing issue that has significant environmental, social and ec
 Our goal is to develop an information-based intervention by creating an interactive and engaging multiple-choice quiz application with 20 questions, using Python as the main code language and the Python-based library Streamlit for web application development.  
 The app aims to provide an enjoyable and educational experience for users, testing their knowledge and giving them practical tips on how to make their home more sustainable, encouraging them to take simple measures and contribute to reducing food waste.
 
-You can check our project's presentation [here]()
+You can check our project's presentation [here](https://docs.google.com/presentation/d/1Ygk1L1ljJIeZt7C9bwMsYJCEgecxLvHYDsUkMmnZVjc/edit?usp=sharing)
 
 ## Food Waste Wizard 🌟
 
@@ -31,7 +31,7 @@ Are you ready to explore the realm of food waste and sustainability? Join us as 
 
 ## Food Waste Wizard's Team
 
-🧙‍♀️ [Inês Alves](http://www.linkedin.com/in/inêstavaresalves). - *Team Lead*, Machine Learning<br>
+🧙‍♀️ [Inês Alves](http://www.linkedin.com/in/inêstavaresalves) - *Team Lead*, Machine Learning<br>
 🧙‍♀️ [Maria Manuela Alves](https://www.linkedin.com/in/maria-manuela-alves/) - *Team Member*, Machine Learning
 
 
