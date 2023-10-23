@@ -76,7 +76,7 @@ st.caption('Please select one of the options below:')
 
 question = st.radio(
     "Which of these sentences about food leftovers is true?",
-    ["Leftovers should be eaten within 3-4 days", "Leftover rice should be eaten within 2 days ", 
+    ["Leftovers should be eaten within 3-4 days", "Leftover rice should be eaten within 2 days", 
     "Leftovers must be cool and stored in the fridge within 2 hours after they were cooked", "Options A and B"],index=None,key= "q8",
     on_change=update_mc,
     disabled=st.session_state.d8
