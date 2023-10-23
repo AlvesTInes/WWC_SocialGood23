@@ -5,14 +5,15 @@ Our solution is an Educational Quiz Application - *Food Waste Wizard*.
 
 ## Challenge Statement
 
-Food waste is a pressing issue that has significant environmental, social and economic consequences.<br>  
-Our goal is to develop an information-based intervention by creating an interactive and engaging multiple-choice quiz application with 20 questions, using Python as the main code language and the Python-based library Streamlit for web application development.<br> 
+Food waste is a pressing issue that has significant environmental, social and economic consequences<br>.  
+Our goal is to develop an information-based intervention by creating an interactive and engaging multiple-choice quiz application with 20 questions, using Python as the main code language and the Python-based library Streamlit for web application development<br> .
 The app aims to provide an enjoyable and educational experience for users, testing their knowledge and giving them practical tips on how to make their home more sustainable, encouraging them to take simple measures and contribute to reducing food waste.
 
 You can check our project's presentation [here]()
 
-Are you ready to explore the realm of food waste and sustainability? Join us as we embark on this mystical journey to reduce food waste.<br>
-Go to Food Waste Wizards Streamlit app and let the quiz begin! 
+Are you ready to explore the realm of food waste and sustainability? Join us as we embark on this mystical journey to reduce food waste<br>.
+
+*Go to Food Waste Wizards Streamlit app and let the quiz begin!* 
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://foodwastewizard.streamlit.app/)
 
