@@ -40,9 +40,6 @@ background-attachment: fixed;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# This allows us to display the avatar in the current page
-st.session_state.avatar = st.session_state.avatar
-
 # Initializing the session state; it is intended to not allow the user to return to the 'Food Storage Wizards!'page
 # once it clicks the button
 if "intro" not in st.session_state:
