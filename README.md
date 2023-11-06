@@ -1,3 +1,5 @@
+![Image](https://www.dropbox.com/preview/Github.png?context=content_suggestions&role=personal)
+
 # WWC_SocialGood23 - Food Waste Wizard 🪄🧙
 
 [WWCode Hackathon For Social Good](https://hopin.com/events/wwcode-hackathon-for-social-good/registration) is a global online hackathon (Oct.12th - Nov. 4th, 2023) 🌍. Where you can learn and develop a project for the social good.
@@ -31,8 +33,8 @@ Are you ready to explore the realm of food waste and sustainability? Join us as 
 
 ## Food Waste Wizard's Team
 
-🧙‍♀️ [Inês Alves](http://www.linkedin.com/in/inêstavaresalves) - *Team Lead*, Machine Learning<br>
-🧙‍♀️ [Maria Manuela Alves](https://www.linkedin.com/in/maria-manuela-alves/) - *Team Member*, Machine Learning
+🧙‍♀️ [Inês Alves](http://www.linkedin.com/in/inêstavaresalves) - *Team Lead* | Python, Machine Learning<br>
+🧙‍♀️ [Maria Manuela Alves](https://www.linkedin.com/in/maria-manuela-alves/) - *Team Member* | Python, Machine Learning
 
 
 
