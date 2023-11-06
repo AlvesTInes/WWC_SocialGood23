@@ -9,7 +9,7 @@ Food waste is a pressing issue that has significant environmental, social and ec
 Our goal is to develop an information-based intervention by creating an interactive and engaging multiple-choice quiz application with 20 questions, using Python as the main code language and the Python-based library Streamlit for web application development.  
 The app aims to provide an enjoyable and educational experience for users, testing their knowledge and giving them practical tips on how to make their home more sustainable, encouraging them to take simple measures and contribute to reducing food waste.
 
-You can check our project's presentation [here](https://docs.google.com/presentation/d/1Ygk1L1ljJIeZt7C9bwMsYJCEgecxLvHYDsUkMmnZVjc/edit?usp=sharing)
+You can check our project's presentation [here](https://www.canva.com/design/DAFzaABbGlg/yeA_5gAq0esBqKQFyXQbXA/view?utm_content=DAFzaABbGlg&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 ## Food Waste Wizard 🌟
 
