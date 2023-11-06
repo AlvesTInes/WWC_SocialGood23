@@ -1,4 +1,4 @@
-![Image](https://www.dropbox.com/scl/fi/ndkfnxk3h5cn7ykulis05/Github.jpg?rlkey=sg5l04cramd4seiju3plu58u0&dl=0)
+![Image](Github.png)
 
 # WWC_SocialGood23 - Food Waste Wizard 🪄🧙
 
