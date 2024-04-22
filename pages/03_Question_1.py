@@ -92,7 +92,10 @@ Submit_button=st.button('Submit',on_click=disable, disabled=st.session_state.d1)
 # Once the submit_button is clicked: if the correct option is chosen, the 'score_1' updates and is equal to 1
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
 if Submit_button:
-    if st.session_state.q1 == "All of the above":
+    if not question:
+        st.warning "Please select an option"
+    else:
+        if st.session_state.q1 == "All of the above":
         st.session_state.score_1 +=1
         col1, col2=st.columns([6,1])
         with col1:
@@ -103,7 +106,7 @@ if Submit_button:
         with st.expander('**📖 Feedback**:'):
             st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
 # If the wrong option is selected the 'score_1' is 0, a error message is display as well as the correct option and some feedback            
-    else:
+        else:
         st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
         st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
 # The option that the user selected is displayed
