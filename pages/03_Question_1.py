@@ -88,14 +88,10 @@ question = st.radio(
     disabled=st.session_state.d1
     )
 # Once the submit_button is clicked, it disables; meaning the user only has one chance to answer the question
-#Submit_button=st.button('Submit')
+Submit_button=st.button('Submit',on_click=disable, disabled=st.session_state.d1)
 # Once the submit_button is clicked: if the correct option is chosen, the 'score_1' updates and is equal to 1
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
-if st.button('Submit'):
-    if not question:
-        st.warning ("Please select an option")
-    else:
-        st.button('Submit',on_click=disable, disabled=st.session_state.d1)
+if Submit_button:
         if st.session_state.q1 == "All of the above":
             st.session_state.score_1 +=1
             col1, col2=st.columns([6,1])
@@ -120,7 +116,9 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button('Next'):
-        switch_page('Question 2') 
+            if not question:
+                st.warning ("Please select an option")
+    else: switch_page('Question 2') 
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
