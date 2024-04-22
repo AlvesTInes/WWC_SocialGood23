@@ -117,6 +117,6 @@ with col2:
         switch_page('Question 1')
 
 # Read the value of the items in Session State
-#st.write(st.session_state)
+st.write(st.session_state)
 
   
