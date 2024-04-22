@@ -87,7 +87,7 @@ question = st.radio(
     on_change=update_mc,
     disabled=st.session_state.d1
     )
-# Once the submit_button is clicked, it disables; meaning the user only has one chance to answer the question
+# Once an answer is clicked, it disables; meaning the user only has one chance to answer the question
 Submit_button=st.button('Submit')
 # Once the submit_button is clicked: if the correct option is chosen, the 'score_1' updates and is equal to 1
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
