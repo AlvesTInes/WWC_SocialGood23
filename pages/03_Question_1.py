@@ -116,9 +116,8 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button('Next'):
-        if not question:
+        if st.session_state.Question1 is None:
             st.warning ("Please select an option") 
-            st.stop()
         else:
             switch_page('Question 2')
 
