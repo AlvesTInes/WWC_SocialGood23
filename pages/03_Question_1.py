@@ -118,7 +118,7 @@ with col2:
     if st.button('Next'):
         if not question:
             st.warning ("Please select an option") 
-            st.stop
+            st.stop()
         else:
             switch_page('Question 2')
 
