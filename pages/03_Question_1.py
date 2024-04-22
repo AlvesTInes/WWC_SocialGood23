@@ -116,7 +116,8 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button('Next'):
-        switch_page('Question 2') 
+        if not question:
+            st.warning ("Please select an option")  
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
