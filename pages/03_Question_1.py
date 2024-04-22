@@ -88,7 +88,7 @@ question = st.radio(
     disabled=st.session_state.d1
     )
 # Once an answer is clicked, it disables; meaning the user only has one chance to answer the question
-Submit_button=st.button('Submit')
+Submit_button=st.button('Submit',disabled=st.session_state.d1)
 # Once the submit_button is clicked: if the correct option is chosen, the 'score_1' updates and is equal to 1
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
 if Submit_button:
@@ -109,7 +109,6 @@ if Submit_button:
         else:
             st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
             st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
-    disable()
 # The option that the user selected is displayed
 st.write(f"You've selected:  **_{st.session_state.Question1}_**")
 
