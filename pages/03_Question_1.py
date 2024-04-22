@@ -96,19 +96,19 @@ if Submit_button:
         st.warning ("Please select an option")
     else:
         if st.session_state.q1 == "All of the above":
-        st.session_state.score_1 +=1
-        col1, col2=st.columns([6,1])
-        with col1:
-            st.success("Bravo, you've unlocked the secret of knowledge! Well done! 🗝️")
-        with col2:
-            st.warning('&nbsp;&nbsp;&nbsp;**+1** 🌟')
-        rain(emoji="✨", font_size=70, falling_speed=2,animation_length=2)
-        with st.expander('**📖 Feedback**:'):
-            st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
+            st.session_state.score_1 +=1
+            col1, col2=st.columns([6,1])
+            with col1:
+                st.success("Bravo, you've unlocked the secret of knowledge! Well done! 🗝️")
+                with col2:
+                    st.warning('&nbsp;&nbsp;&nbsp;**+1** 🌟')
+                    rain(emoji="✨", font_size=70, falling_speed=2,animation_length=2)
+                    with st.expander('**📖 Feedback**:'):
+                        st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
 # If the wrong option is selected the 'score_1' is 0, a error message is display as well as the correct option and some feedback            
         else:
-        st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
-        st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
+            st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
+            st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
 # The option that the user selected is displayed
 st.write(f"You've selected:  **_{st.session_state.Question1}_**")
 
