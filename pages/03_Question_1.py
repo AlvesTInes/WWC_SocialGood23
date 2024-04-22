@@ -93,7 +93,7 @@ Submit_button=st.button('Submit',on_click=disable, disabled=st.session_state.d1)
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
 if Submit_button:
     if not question:
-        st.warning "Please select an option"
+        st.warning ("Please select an option")
     else:
         if st.session_state.q1 == "All of the above":
         st.session_state.score_1 +=1
