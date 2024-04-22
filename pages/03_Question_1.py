@@ -119,7 +119,7 @@ with col2:
         if not question:
             st.warning ("Please select an option") 
         if question:
-        switch_page('Question 2')
+            switch_page('Question 2')
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
