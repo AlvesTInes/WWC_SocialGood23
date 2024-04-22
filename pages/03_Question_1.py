@@ -84,7 +84,8 @@ question = st.radio(
     "Which option would allow you to reduce food waste in your kitchen?",
     ["Plan your meals", "Buying 'ugly' foods", 
     "Good food storage knowledge and behaviours", "All of the above"],index=None,key= "q1", # The index = None, no option is preselected
-    on_change=update_mc
+    on_change=update_mc,
+    disabled=st.session_state.d1
     )
 # Once the submit_button is clicked, it disables; meaning the user only has one chance to answer the question
 Submit_button=st.button('Submit')
