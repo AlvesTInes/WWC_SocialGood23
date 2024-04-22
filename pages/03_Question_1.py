@@ -109,6 +109,7 @@ if Submit_button:
         else:
             st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
             st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
+    disable()
 # The option that the user selected is displayed
 st.write(f"You've selected:  **_{st.session_state.Question1}_**")
 
