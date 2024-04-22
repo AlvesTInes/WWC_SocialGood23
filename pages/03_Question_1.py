@@ -112,6 +112,8 @@ if Submit_button:
 # The option that the user selected is displayed
 st.write(f"You've selected:  **_{st.session_state.Question1}_**")
 
+disable()
+
 st.markdown('***')
 # Defining the st.button's layout; once the submit_button it's clicked (on_click callback) it disables (disabled)
 # and chances to the next page ('Question 2')
