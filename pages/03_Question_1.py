@@ -120,7 +120,8 @@ with col2:
     open_modal = st.button("Next")
     if open_modal:
         if not st.session_state.Question1:
-            modal.open()
+            with modal.container():
+                st.markdown("Please select an option")
         else: 
             switch_page('Question 2')
 
