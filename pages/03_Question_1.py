@@ -115,12 +115,11 @@ st.markdown('***')
 col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
-    st.button('Next')
-if st.button('Next'):
-    if not st.session_state.Question1:
-        st.warning ("Please select an option")
-    else:
-        switch_page('Question 2')
+    if st.button('Next'):
+        if not st.session_state.Question1:
+            st.warning ("Please select an option")
+        else:
+            switch_page('Question 2')
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
