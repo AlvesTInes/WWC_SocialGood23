@@ -118,9 +118,11 @@ col1, col2, col3 = st.columns([2,1,2])
 modal = Modal("Warning", key="demo-modal")
 with col2:
     open_modal = st.button("Next")
-if open_modal:
-    modal.open()
-
+    if open_modal:
+        if not st.session_state.Question1:
+            modal.open()
+        else: 
+            switch_page('Question 2')
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
