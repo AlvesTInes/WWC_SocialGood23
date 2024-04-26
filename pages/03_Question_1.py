@@ -91,8 +91,8 @@ question = st.radio(
 Submit_button=st.button('Submit',disabled=st.session_state.d1)
 # Once the submit_button is clicked: if the correct option is chosen, the 'score_1' updates and is equal to 1
 # a sucess message is displayed, as well as a +1 message; additionaly some feedback is also provided
-if Submit_button: 
-if st.session_state.q1 == "All of the above":
+if Submit_button:
+    if st.session_state.q1 == "All of the above":
     st.session_state.score_1 +=1
     col1, col2=st.columns([6,1])
     with col1:
