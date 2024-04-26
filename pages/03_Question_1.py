@@ -116,7 +116,9 @@ st.markdown('***')
 col1, col2, col3 = st.columns([2,1,2])
 
 modal = Modal("Warning", key="demo-modal")
-open_modal = st.button("Next")
+
+with col2:
+    open_modal = st.button("Next")
 if open_modal:
     if not st.session_state.Question1:
         with modal.container():
