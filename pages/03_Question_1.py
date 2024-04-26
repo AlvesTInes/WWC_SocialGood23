@@ -118,9 +118,9 @@ col1, col2, col3 = st.columns([2,1,2])
 modal = Modal("Warning", key="demo-modal")
 with col2:
     open_modal = st.button("Next")
-    if open_modal:
-        with modal.container():
-            st.markdown("Please select an option")
+if open_modal:
+    modal.open()
+
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
