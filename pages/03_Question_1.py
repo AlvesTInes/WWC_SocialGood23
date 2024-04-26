@@ -3,6 +3,7 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.let_it_rain import rain
 from streamlit_space import space
 from st_pages import add_page_title
+from streamlit_modal import Modal
 from PIL import Image
 import base64
 
@@ -114,10 +115,12 @@ st.markdown('***')
 # and chances to the next page ('Question 2')
 col1, col2, col3 = st.columns([2,1,2])
 
+modal = Modal("Please select an option", key="demo-modal")
+open_modal = st.button("Next")
 with col2:
-    if st.button('Next'):
+    if open_modal:
         if not st.session_state.Question1:
-                st.alert ("Please select an option").open()
+                modal.open()
         else:
             switch_page('Question 2')
 
