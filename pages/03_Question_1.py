@@ -103,9 +103,9 @@ if Submit_button:
             with st.expander('**📖 Feedback**:'):
                 st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
 # If the wrong option is selected the 'score_1' is 0, a error message is display as well as the correct option and some feedback            
-   else:
-       st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
-       st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
+    else:
+        st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
+        st.info('**The correct answer is: All of the above**  \n  \n All the options are valuable tips for avoiding food waste at home!')
 # The option that the user selected is displayed
 st.write(f"You've selected:  **_{st.session_state.Question1}_**")
 
