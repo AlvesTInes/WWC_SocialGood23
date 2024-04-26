@@ -114,7 +114,7 @@ with col1:
 with col5:
     if st.button('Next'):
         if not st.session_state.Question2:
-            with col2,col3,col4:
+            with col3:
                 st.warning ("Please select an option")
         else:
             switch_page('Question 3') 
