@@ -115,12 +115,12 @@ st.markdown('***')
 # and chances to the next page ('Question 2')
 col1, col2, col3 = st.columns([2,1,2])
 
-modal = Modal("Warning", key="demo-modal")
+#modal = Modal("Warning", key="demo-modal")
 with col2:
     open_modal = st.button("Next")
     if open_modal:
         if not st.session_state.Question1:
-            modal.open()
+            st.warning("Attention")
         else: 
             switch_page('Question 2')
 
