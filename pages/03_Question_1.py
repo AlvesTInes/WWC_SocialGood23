@@ -119,10 +119,10 @@ modal = Modal("Please select an option", key="demo-modal")
 with col2:
     open_modal = st.button("Next")
     if open_modal:
-        if not st.session_state.Question1:
-                modal.open()
-        else:
-            switch_page('Question 2')
+        #if not st.session_state.Question1:
+        modal.open()
+        #else:
+            #switch_page('Question 2')
 
 # Read the value of the items in Session State
 # st.write(st.session_state)
