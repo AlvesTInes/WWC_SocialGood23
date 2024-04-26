@@ -113,6 +113,13 @@ with col1:
     if st.button('Previous'):
         switch_page('Question 19') 
     
-
+with col5:
+    open_modal = st.button('Finish Quiz!')
+if open_modal:
+    if not st.session_state.Question19:
+        with modal.container():
+            st.markdown("***Please select an option***")
+    else:
+            switch_page('Finish Line') 
        
 #st.write(st.session_state)
