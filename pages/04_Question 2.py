@@ -115,11 +115,12 @@ with col1:
         switch_page('Question 1') 
     
 with col5:
-    if st.button('Next'):
-        if not st.session_state.Question2:
-            with col3:
-                st.warning ("Please select an option")
-        else:
+    open_modal = st.button('Next')
+if open_modal:
+    if not st.session_state.Question2:
+        with modal.container():
+            st.markdown("***Please select an option***")
+    else:
             switch_page('Question 3') 
        
 # st.write(st.session_state)
