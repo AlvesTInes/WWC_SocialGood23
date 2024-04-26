@@ -99,9 +99,9 @@ if Submit_button:
             st.success("Bravo, you've unlocked the secret of knowledge! Well done! 🗝️")
         with col2:
             st.warning('&nbsp;&nbsp;&nbsp;**+1** 🌟')
-            rain(emoji="✨", font_size=70, falling_speed=2,animation_length=2)
-            with st.expander('**📖 Feedback**:'):
-                st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
+        rain(emoji="✨", font_size=70, falling_speed=2,animation_length=2)
+        with st.expander('**📖 Feedback**:'):
+            st.markdown('  \nAll the options are valuable tips for avoiding food waste at home! ')
 # If the wrong option is selected the 'score_1' is 0, a error message is display as well as the correct option and some feedback            
     else:
         st.error('Oh, wizardry gone astray! That answer missed the mark. 🪄')
