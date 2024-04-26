@@ -105,7 +105,9 @@ st.write(f"You've selected:  **_{st.session_state.Question3}_**")
 
 st.markdown('***')
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4, col5 = st.columns(5) 
+
+modal = Modal("Warning",key="demo-modal")
 
 with col1:
     if st.button('Previous'):
