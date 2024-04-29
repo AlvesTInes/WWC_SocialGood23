@@ -78,7 +78,7 @@ space(lines=1)
 st.markdown("**Please select your avatar:**")
 # Displaying an image select component, where the user must choose 1 of the 4 available avatars to represent them
 avatar = image_select(
-    label=("A"),
+    label=("&nbsp;&nbsp;&nbsp;A"),
     images=[
         Image.open(r"Avatar_1.jpg"), # The images are a local 'png' file
         Image.open(r"Avatar_2.jpg"),
