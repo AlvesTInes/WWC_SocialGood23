@@ -70,8 +70,8 @@ space(lines=1)
 age= st.slider('**How old are you?**', 13,100, key='slider', on_change=update_age, disabled=st.session_state.quiz) # Once the user selects their age, this value will be stored under the key 'age'
 space(lines=1)
 # Displaying a select widget, where the user should choose from the options presented their gender identity
-gender_id= st.selectbox('**Please select your gender identity:**', ['--Select--','Female','Trans Female','Male','Trans Male','Genderqueer','Non-binary','Prefer not to say'],
-                        key='select_box', 
+gender_id= st.selectbox('**Please select your gender identity:**', ['Female','Trans Female','Male','Trans Male','Genderqueer','Non-binary','Prefer not to say'],
+                        index=None, placeholder="Select your gender identiy", key='select_box', 
                         on_change=update_gender_id, # Once the user selects their gender identity, it will store that value under the key 'gender_id'
                         disabled=st.session_state.quiz)
 space(lines=1)
