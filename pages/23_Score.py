@@ -46,7 +46,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 add_page_title()
 
 #Establishing a Google Sheets connection
-conn=st.experimental_connection("gsheets", type=GSheetsConnection)
+conn=st.connection("gsheets", type=GSheetsConnection)
 
 #Fetch existing data
 existing_data=conn.read(worksheet='Food Waste Wizards', ttl=5)
@@ -116,10 +116,10 @@ with col2:
      st.write(st.session_state)
 
 #Create a new row of user_data
-user_data=pd.DataFrame(st.session_state)
+#user_data=pd.DataFrame(st.session_state)
 
 #Add the new user_data to the existing data
-updated_df=pd.concat([existing_data, user_data], ignore_index=True)
+#updated_df=pd.concat([existing_data, user_data], ignore_index=True)
 
 #Update Google Sheets with the new user_data
-conn.update(worksheet="Food Waste Wizards", data=updated_df)
+#conn.update(worksheet="Food Waste Wizards", data=updated_df)
