@@ -77,11 +77,11 @@ space(lines=1)
 # Displaying a select widget, where the user should choose their continent and country
 data = 'https://raw.githubusercontent.com/AlvesTInes/WWC_SocialGood23/main/Countries%20by%20continents.csv'
 df = pd.read_csv(data)
-continent_data = df['Continent']
+continent_data = df['Continent'].drop_duplicates()
 continent = st.selectbox('**Please select a Continent:**', continent_data, index=None, placeholder="Select a continent", key='select_boxcontinent',
                          on_change=update_continent, disabled=st.session_state.quiz)
 space(lines=1)
-df1 = df.loc[df.Continent == continent]
+df1 = df.loc[continent_data == continent]
 df2 = df1.Country
 country = st.selectbox('**Please select a Country:**', df2, index=None, placeholder="Select a country", key='select_boxcountry',
                          on_change=update_country, disabled=st.session_state.quiz)
