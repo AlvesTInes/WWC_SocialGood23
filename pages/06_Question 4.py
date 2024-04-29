@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.let_it_rain import rain
 from streamlit_space import space
-from streamli_modal import Modal
+from streamlit_modal import Modal
 from st_pages import add_page_title
 from PIL import Image
 import base64
