@@ -6,4 +6,4 @@ st-pages == 0.4.5
 streamlit-image-select == 0.6.0
 streamlit-modal == 0.1.2
 toml == 0.10.2
-st-gsheets-connection
+st-gsheets-connection == 0.0.4
