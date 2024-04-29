@@ -46,7 +46,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 add_page_title()
 
 #Establishing a Google Sheets connection
-conn=st.connection("gsheets", type=GSheetsConnection)
+conn=st.experimental_connection("gsheets", type=GSheetsConnection)
 
 #Fetch existing data
 existing_data=conn.read(worksheet='Food Waste Wizards', ttl=5)
