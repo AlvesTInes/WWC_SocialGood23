@@ -78,12 +78,12 @@ space(lines=1)
 data = 'https://raw.githubusercontent.com/AlvesTInes/WWC_SocialGood23/main/Countries%20by%20continents.csv'
 df = pd.read_csv(data)
 continent_data = df['Continent']
-continent = st.selectbox('**Please select a continent:**', continent_data, index=None, placeholder="Select a continent", key='select_boxcontinent',
+continent = st.selectbox('**Please select a Continent:**', continent_data, index=None, placeholder="Select a continent", key='select_boxcontinent',
                          on_change=update_continent, disabled=st.session_state.quiz)
 space(lines=1)
 df1 = df.loc[df.Continent == continent]
-df2 = df1.country
-country = st.selectbox('**Please select a country:**', df2, index=None, placeholder="Select a country", key='select_boxcountry',
+df2 = df1.Country
+country = st.selectbox('**Please select a Country:**', df2, index=None, placeholder="Select a country", key='select_boxcountry',
                          on_change=update_country, disabled=st.session_state.quiz)
 space(lines=1)
 # Displaying a select widget, where the user should choose from the options presented their gender identity
