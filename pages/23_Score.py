@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+from streamlit_gsheets import GSheetsConnection
 from st_pages import add_page_title
 from streamlit_space import space
 import base64
