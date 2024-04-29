@@ -60,8 +60,12 @@ def disable():
 # updates the "non-widget session state key value" to be the same as the "widget session state key value"
 def update_age():
     st.session_state.age = st.session_state["slider"]
+def update_continent():
+    st.session_state.continent = st.session_state["select_boxcontinent"]
+def update_country():
+    st.session_state.country = st.session_state["select_boxcountry"]
 def update_gender_id():
-    st.session_state.gender_id = st.session_state["select_box"]
+    st.session_state.gender_id = st.session_state["select_boxage"]
 
 # Displaying a single-line text input widget, where the user must insert their user identification
 user_id= st.text_input('**Please create an User ID:**', disabled=st.session_state.quiz)
@@ -69,9 +73,22 @@ space(lines=1)
 # Displaying a range slider widget, where the user should choose their age (from 13, minimum, to 100, maximum)
 age= st.slider('**How old are you?**', 13,100, key='slider', on_change=update_age, disabled=st.session_state.quiz) # Once the user selects their age, this value will be stored under the key 'age'
 space(lines=1)
+# Displaying a select widget, where the user should choose their continent and country
+data = 'https://raw.githubusercontent.com/AlvesTInes/WWC_SocialGood23/main/Countries%20by%20continents.csv'
+df = pd.read_csv(data)
+continent_select = df['continent'].drop_duplicates()
+continent = st.selectbox('**Please select a continent:**', continent_select, index=None, placeholder="Select a continent", key='select_boxcontinent',
+                         on_change=update_continent, disabled=st.session_state.quiz)
+space(lines=1)
+country_select = df['country'].drop_duplicates()
+df1 = df.loc[df.continent == continent]
+df2 = df1.country
+country = st.selectbox('**Please select a country:**', df2, index=None, placeholder="Select a country", key='select_boxcountry',
+                         on_change=update_country, disabled=st.session_state.quiz)
+space(lines=1)
 # Displaying a select widget, where the user should choose from the options presented their gender identity
 gender_id= st.selectbox('**Please select your gender identity:**', ['Female','Trans Female','Male','Trans Male','Genderqueer','Non-binary','Prefer not to say'],
-                        index=None, placeholder="Select your gender identiy", key='select_box', 
+                        index=None, placeholder="Select your gender identiy", key='select_boxage', 
                         on_change=update_gender_id, # Once the user selects their gender identity, it will store that value under the key 'gender_id'
                         disabled=st.session_state.quiz)
 space(lines=1)
