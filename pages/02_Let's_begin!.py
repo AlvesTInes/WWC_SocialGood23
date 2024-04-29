@@ -81,7 +81,7 @@ continent_data = df['Continent'].drop_duplicates()
 continent = st.selectbox('**Please select a Continent:**', continent_data, index=None, placeholder="Select a continent", key='select_boxcontinent',
                          on_change=update_continent, disabled=st.session_state.quiz)
 space(lines=1)
-df1 = df.loc[continent_data == continent]
+df1 = df.loc[df.Continent == continent]
 df2 = df1.Country
 country = st.selectbox('**Please select a Country:**', df2, index=None, placeholder="Select a country", key='select_boxcountry',
                          on_change=update_country, disabled=st.session_state.quiz)
