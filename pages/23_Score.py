@@ -49,7 +49,7 @@ add_page_title()
 conn=st.connection("gsheets", type=GSheetsConnection)
 
 #Fetch existing data
-existing_data=conn.read(worksheet='Food Waste Wizards', ttl=5)
+existing_data=conn.read(worksheet='FoodWasteWizards', ttl=5)
 
 # Calculate the total score of the user, by summing all of the session state scores
 total_score = st.session_state.score_1 + st.session_state.score_2 + st.session_state.score_3 + st.session_state.score_4 + st.session_state.score_5 + st.session_state.score_6 + st.session_state.score_7 + st.session_state.score_8 + st.session_state.score_9 + st.session_state.score_10 + st.session_state.score_11 + st.session_state.score_12 + st.session_state.score_13 + st.session_state.score_14 + st.session_state.score_15 + st.session_state.score_16 + st.session_state.score_17 + st.session_state.score_18 + st.session_state.score_19 + st.session_state.score_20
@@ -122,4 +122,4 @@ with col2:
 #updated_df=pd.concat([existing_data, user_data], ignore_index=True)
 
 #Update Google Sheets with the new user_data
-#conn.update(worksheet="Food Waste Wizards", data=updated_df)
+#conn.update(worksheet="FoodWasteWizards", data=updated_df)
