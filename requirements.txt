@@ -7,5 +7,4 @@ streamlit-image-select == 0.6.0
 streamlit-modal == 0.1.2
 toml == 0.10.2
 st-gsheets-connection == 0.0.4
-google-auth == 2.29.0
-google-auth-oauthlib == 1.2.0
+
