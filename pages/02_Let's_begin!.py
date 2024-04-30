@@ -55,7 +55,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, asp
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards",usecols=[0,1,2,3,4], ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(5)), ttl=5)
 existing_data=existing_data.dropna(how='all')
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
@@ -139,7 +139,17 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
-        user_data = pd.DataFrame([{"user_id": user_id,"age": age,"continent": continent,"country": country,"gender_id": gender_id,}])
+        user_data = pd.DataFrame(
+            [
+                {
+                    "user_id": user_id,
+                    "age": age,
+                    "continent": continent,
+                    "country": country,
+                    "gender_id": gender_id,
+                }
+            ]
+        )
         updated_df = pd.concat([existing_data, user_data], ignore_index=True)
         conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 1')
