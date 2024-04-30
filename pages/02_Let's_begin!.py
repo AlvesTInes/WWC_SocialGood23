@@ -55,7 +55,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, asp
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", usecols=[0,4], ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards",ttl=5)
 existing_data=existing_data.dropna(how='all')
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
