@@ -49,7 +49,7 @@ add_page_title()
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(26)), ttl=5)
 existing_data=existing_data.dropna(how='all')
 
 # Calculate the total score of the user, by summing all of the session state scores
@@ -106,12 +106,46 @@ with col2:
 
 col1,col2,col3 = st.columns([2,1,2])
 with col2:
- Feedback_button=st.button('Send',on_click=disable, disabled=st.session_state.rate) 
+ End_button=st.button('End Quiz',on_click=disable, disabled=st.session_state.rate) 
 
 col1,col2,col3 = st.columns([1,5,1])
 with col2:
- if Feedback_button:
-     st.write("**Thank you for your feedback!**")
+ if End_button:
+     user_data = pd.DataFrame(
+            [
+                {
+                    "user_id": user_id,
+                    "age": age,
+                    "continent": continent,
+                    "country": country,
+                    "gender_id": gender_id,
+                    "score_1": score_1,
+                    "score_2": score_2,
+                    "score_3": score_3,
+                    "score_4": score_4,
+                    "score_5": score_5,
+                    "score_6": score_6,
+                    "score_7": score_7,
+                    "score_8": score_8,
+                    "score_9": score_9,
+                    "score_10": score_10,
+                    "score_11": score_11,
+                    "score_12": score_12,
+                    "score_13": score_13,
+                    "score_14": score_14,
+                    "score_15": score_15,
+                    "score_16": score_16,
+                    "score_17": score_17,
+                    "score_18": score_18,
+                    "score_19": score_19,
+                    "score_20": score_20,
+                    "rating": rating,
+                }
+            ]
+        )
+    updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+    conn.update(worksheet="FoodWasteWizards", data=updated_df)
+    st.write("**Thank you!**")
 
 # Read the value of the items in Session State
 #st.write(st.session_state)
