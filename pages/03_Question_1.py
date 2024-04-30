@@ -68,7 +68,7 @@ st.sidebar.image(images[st.session_state.avatar])
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", usecols=[5], ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards",ttl=5)
 existing_data=existing_data.dropna(how='all')
 
 # Initializing a session state variable called 'd1' to False; pass the former to the st.button's 'd1' parameter
@@ -133,6 +133,9 @@ if open_modal:
         with modal.container():
             st.markdown("***Please select an option***")
     else:
+        user_data = pd.DataFrame([{"score_1": score_1}])
+        updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+        conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 2')
 
 # Read the value of the items in Session State
