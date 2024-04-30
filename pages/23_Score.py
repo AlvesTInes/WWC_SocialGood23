@@ -46,11 +46,11 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 add_page_title() 
 
 # Establishing a Google Sheets Connection
-conn= st.connection("gsheets", type=GSheetsConnection)
+#conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", ttl=5)
-existing_data=existing_data.dropna(how='all')
+#existing_data= conn.read(worksheet="FoodWasteWizards", ttl=5)
+#existing_data=existing_data.dropna(how='all')
 
 # Calculate the total score of the user, by summing all of the session state scores
 total_score = st.session_state.score_1 + st.session_state.score_2 + st.session_state.score_3 + st.session_state.score_4 + st.session_state.score_5 + st.session_state.score_6 + st.session_state.score_7 + st.session_state.score_8 + st.session_state.score_9 + st.session_state.score_10 + st.session_state.score_11 + st.session_state.score_12 + st.session_state.score_13 + st.session_state.score_14 + st.session_state.score_15 + st.session_state.score_16 + st.session_state.score_17 + st.session_state.score_18 + st.session_state.score_19 + st.session_state.score_20
@@ -111,40 +111,40 @@ with col2:
 col1,col2,col3 = st.columns([1,5,1])
 with col2:
  if End_button:
-     user_data = pd.DataFrame(
-         [
-             {
-                 "user_id": user_id,
-                 "age": age,
-                 "continent": continent,
-                 "country": country,
-                 "gender_id": gender_id,
-                 "score_1": score_1,
-                 "score_2": score_2,
-                 "score_3": score_3,
-                 "score_4": score_4,
-                 "score_5": score_5,
-                 "score_6": score_6,
-                 "score_7": score_7,
-                 "score_8": score_8,
-                 "score_9": score_9,
-                 "score_10": score_10,
-                 "score_11": score_11,
-                 "score_12": score_12,
-                 "score_13": score_13,
-                 "score_14": score_14,
-                 "score_15": score_15,
-                 "score_16": score_16,
-                 "score_17": score_17,
-                 "score_18": score_18,
-                 "score_19": score_19,
-                 "score_20": score_20,
-                 "rating": rating,
-             }
-         ]
-     )
-     updated_df = pd.concat([existing_data, user_data], ignore_index=True)
-     conn.update(worksheet="FoodWasteWizards", data=updated_df)
+     #user_data = pd.DataFrame(
+         #[
+             #{
+                 #"user_id": user_id,
+                 #"age": age,
+                 #"continent": continent,
+                 #"country": country,
+                 #"gender_id": gender_id,
+                 #"score_1": score_1,
+                 #"score_2": score_2,
+                 #"score_3": score_3,
+                 #"score_4": score_4,
+                 #"score_5": score_5,
+                 #"score_6": score_6,
+                 #"score_7": score_7,
+                 #"score_8": score_8,
+                 #"score_9": score_9,
+                 #"score_10": score_10,
+                 #"score_11": score_11,
+                 #"score_12": score_12,
+                 #"score_13": score_13,
+                 #"score_14": score_14,
+                 #"score_15": score_15,
+                 #"score_16": score_16,
+                 #"score_17": score_17,
+                 #"score_18": score_18,
+                 #"score_19": score_19,
+                 #"score_20": score_20,
+                 #"rating": rating,
+             #}
+         #]
+     #)
+     #updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+     #conn.update(worksheet="FoodWasteWizards", data=updated_df)
      st.write("**Thank you!**")
 
 # Read the value of the items in Session State
