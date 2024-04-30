@@ -56,6 +56,7 @@ conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
 existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
+existing_data=existing_data.dropna(how='all')
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
 if "quiz" not in st.session_state:
