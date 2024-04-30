@@ -72,6 +72,6 @@ background-attachment: fixed;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Text to be displayed in the page
-space(lines=19) # Creating an empty portion of the app
-st.markdown("**Are you ready to explore the realm of food waste and sustainability?  Join us as we embark on this mystical journey to reduce food waste.**")
-st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n**Go to _👉Food Waste Wizards_ in the sidebar and let the quiz begin!**</h1>", unsafe_allow_html=True)
+#space(lines=19) # Creating an empty portion of the app
+#st.markdown("**Are you ready to explore the realm of food waste and sustainability?  Join us as we embark on this mystical journey to reduce food waste.**")
+#st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n**Go to _👉Food Waste Wizards_ in the sidebar and let the quiz begin!**</h1>", unsafe_allow_html=True)
