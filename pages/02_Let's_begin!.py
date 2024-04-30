@@ -1,9 +1,7 @@
 import streamlit as st
-import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_space import space
 from streamlit_image_select import image_select
-from streamlit_gsheets import GSheetsConnection
 from st_pages import add_page_title
 from PIL import Image
 import base64
