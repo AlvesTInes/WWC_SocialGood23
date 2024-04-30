@@ -3,6 +3,7 @@ import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_space import space
 from streamlit_image_select import image_select
+from streamlit_gsheets import GSheetsConnection
 from st_pages import add_page_title
 from PIL import Image
 import base64
@@ -49,6 +50,12 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
   
 # Text to be displayed under the page's title
 st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, aspiring Food Waste Wizard!**_  \n  \n_**Let's unlock the mysteries of reducing food waste, transforming your home into a magical realm of eco-consciousness**_</h1>", unsafe_allow_html=True)
+
+# Establishing a Google Sheets Connection
+conn= st.experimental_connection("gsheets", type=GSheetsConnection)
+
+# Fetch existing data
+existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
 if "quiz" not in st.session_state:
@@ -124,6 +131,25 @@ initialize_session_state()
 update_user()
 
 space(lines=2)
+
+# Create a new row of user_data
+user_data = pd.DataFrame(
+    [
+        {
+            "user_id": user_id,
+            "age": age,
+            "continent": continent,
+            "country": country,
+            "gender_id": gender_id,
+        }
+    ]
+)
+
+# Add the new user_data to the existing_data
+updated_df = pd.concat([existing_data, user_data]), ignore_index=True)
+
+# Update Google Sheets with the new user_data
+conn.update(worksheet="FoodWasteWizards", data=updated_df)
 
 # Defining the st.button's layout; once it's clicked (on_click callback) it disables (disabled)
 # and chances to the next page ('Question 1')
