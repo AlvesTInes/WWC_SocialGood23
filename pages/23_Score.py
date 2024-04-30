@@ -49,7 +49,7 @@ add_page_title()
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(26)), ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards", ttl=5)
 existing_data=existing_data.dropna(how='all')
 
 # Calculate the total score of the user, by summing all of the session state scores
