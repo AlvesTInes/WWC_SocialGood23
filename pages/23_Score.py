@@ -143,9 +143,9 @@ with col2:
                 }
             ]
         )
-    updated_df = pd.concat([existing_data, user_data], ignore_index=True)
-    conn.update(worksheet="FoodWasteWizards", data=updated_df)
-    st.write("**Thank you!**")
+     updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+     conn.update(worksheet="FoodWasteWizards", data=updated_df)
+     st.write("**Thank you!**")
 
 # Read the value of the items in Session State
 #st.write(st.session_state)
