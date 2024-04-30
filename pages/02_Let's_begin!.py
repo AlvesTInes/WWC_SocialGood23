@@ -139,6 +139,9 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
+        user_data = pd.DataFrame([{"user_id": user_id,"age": age,"continent": continent,"country": country,"gender_id": gender_id,}])
+        updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+        conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 1')
 
 # Read the value of the items in Session State
