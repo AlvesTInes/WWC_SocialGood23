@@ -146,7 +146,7 @@ user_data = pd.DataFrame(
 )
 
 # Add the new user_data to the existing_data
-updated_df = pd.concat([existing_data, user_data]), ignore_index=True)
+updated_df = pd.concat([existing_data, user_data], ignore_index=True)
 
 # Update Google Sheets with the new user_data
 conn.update(worksheet="FoodWasteWizards", data=updated_df)
