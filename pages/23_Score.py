@@ -114,4 +114,4 @@ with col2:
      st.write("**Thank you for your feedback!**")
 
 # Read the value of the items in Session State
-     st.write(st.session_state)
+#st.write(st.session_state)
