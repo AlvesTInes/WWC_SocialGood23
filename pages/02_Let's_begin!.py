@@ -49,13 +49,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # Text to be displayed under the page's title
 st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, aspiring Food Waste Wizard!**_  \n  \n_**Let's unlock the mysteries of reducing food waste, transforming your home into a magical realm of eco-consciousness**_</h1>", unsafe_allow_html=True)
 
-# Establishing a Google Sheets Connection
-#conn= st.connection("gsheets", type=GSheetsConnection)
-
-# Fetch existing data
-#existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
-#existing_data=existing_data.dropna(how='all')
-
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
 if "quiz" not in st.session_state:
     st.session_state.quiz = False
