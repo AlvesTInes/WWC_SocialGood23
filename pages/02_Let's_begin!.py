@@ -50,11 +50,11 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, aspiring Food Waste Wizard!**_  \n  \n_**Let's unlock the mysteries of reducing food waste, transforming your home into a magical realm of eco-consciousness**_</h1>", unsafe_allow_html=True)
 
 # Establishing a Google Sheets Connection
-conn= st.connection("gsheets", type=GSheetsConnection)
+#conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
-existing_data=existing_data.dropna(how='all')
+#existing_data= conn.read(worksheet="FoodWasteWizards", usecols=list(range(5)), ttl=5)
+#existing_data=existing_data.dropna(how='all')
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
 if "quiz" not in st.session_state:
@@ -131,34 +131,12 @@ update_user()
 
 space(lines=2)
 
-# Create a new row of user_data
-#user_data = pd.DataFrame([{"user_id": user_id,"age": age,"continent": continent,"country": country,"gender_id": gender_id,}])
-
-# Add the new user_data to the existing_data
-#updated_df = pd.concat([existing_data, user_data], ignore_index=True)
-
-# Update Google Sheets with the new user_data
-#conn.update(worksheet="FoodWasteWizards", data=updated_df)
-
 # Defining the st.button's layout; once it's clicked (on_click callback) it disables (disabled)
 # and chances to the next page ('Question 1')
 col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
-        user_data = pd.DataFrame(
-            [
-                {
-                    "user_id": user_id,
-                    "age": age,
-                    "continent": continent,
-                    "country": country,
-                    "gender_id": gender_id,
-                }
-            ]
-        )
-        updated_df = pd.concat([existing_data, user_data], ignore_index=True)
-        conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 1')
 
 # Read the value of the items in Session State
