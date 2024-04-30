@@ -133,7 +133,7 @@ update_user()
 space(lines=2)
 
 # Create a new row of user_data
-user_data = pd.DataFrame(
+#user_data = pd.DataFrame(
     [
         {
             "user_id": user_id,
@@ -146,10 +146,10 @@ user_data = pd.DataFrame(
 )
 
 # Add the new user_data to the existing_data
-updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+#updated_df = pd.concat([existing_data, user_data], ignore_index=True)
 
 # Update Google Sheets with the new user_data
-conn.update(worksheet="FoodWasteWizards", data=updated_df)
+#conn.update(worksheet="FoodWasteWizards", data=updated_df)
 
 # Defining the st.button's layout; once it's clicked (on_click callback) it disables (disabled)
 # and chances to the next page ('Question 1')
@@ -157,6 +157,19 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
+        user_data = pd.DataFrame(
+            [
+                {
+                    "user_id": user_id,
+                    "age": age,
+                    "continent": continent,
+                    "country": country,
+                    "gender_id": gender_id,
+                }
+            ]
+        )
+        updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+        conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 1')
 
 # Read the value of the items in Session State
