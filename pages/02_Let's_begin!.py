@@ -133,17 +133,7 @@ update_user()
 space(lines=2)
 
 # Create a new row of user_data
-#user_data = pd.DataFrame(
-    [
-        {
-            "user_id": user_id,
-            "age": age,
-            "continent": continent,
-            "country": country,
-            "gender_id": gender_id,
-        }
-    ]
-)
+#user_data = pd.DataFrame([{"user_id": user_id,"age": age,"continent": continent,"country": country,"gender_id": gender_id,}])
 
 # Add the new user_data to the existing_data
 #updated_df = pd.concat([existing_data, user_data], ignore_index=True)
