@@ -133,7 +133,7 @@ if open_modal:
         with modal.container():
             st.markdown("***Please select an option***")
     else:
-        user_data = pd.DataFrame({"score_1": st.session_state.score_1})
+        user_data = pd.DataFrame({"score_1": st.session_state.score_1}, index=[0])
         updated_df = pd.concat([existing_data, user_data], ignore_index=True)
         conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 2')
