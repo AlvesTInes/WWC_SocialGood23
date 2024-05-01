@@ -55,7 +55,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, asp
 conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards", ttl=5)
+existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(26)), ttl=5)
 existing_data=existing_data.dropna(how='all')
 st.dataframe(existing_data)
 
