@@ -50,7 +50,7 @@ conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
 existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(26)), ttl=5)
-existing_data=existing_data.dropna(how='all')
+existing_data=existing_data.dropna(how='any')
 
 # Calculate the total score of the user, by summing all of the session state scores
 total_score = st.session_state.score_1 + st.session_state.score_2 + st.session_state.score_3 + st.session_state.score_4 + st.session_state.score_5 + st.session_state.score_6 + st.session_state.score_7 + st.session_state.score_8 + st.session_state.score_9 + st.session_state.score_10 + st.session_state.score_11 + st.session_state.score_12 + st.session_state.score_13 + st.session_state.score_14 + st.session_state.score_15 + st.session_state.score_16 + st.session_state.score_17 + st.session_state.score_18 + st.session_state.score_19 + st.session_state.score_20
