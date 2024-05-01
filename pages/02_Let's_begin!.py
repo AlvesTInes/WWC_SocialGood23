@@ -143,11 +143,11 @@ with col2:
         user_data = pd.DataFrame(
             [
                 {
-                    "user_id": user_id,
-                    "age": age,
-                    "continent": continent,
-                    "country": country,
-                    "gender_id": gender_id,
+                    "user_id": st.session_state.user_id,
+                    "age": st.session_state.age,
+                    "continent": st.session_state.continent,
+                    "country": st.session_state.country,
+                    "gender_id": st.session_state.gender_id,
                 }
             ]
         )
