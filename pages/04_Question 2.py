@@ -61,12 +61,12 @@ st.sidebar.title('Wizard '+ st.session_state.user_id+ '!')
 st.sidebar.image(images[st.session_state.avatar])
 
 # Establishing a Google Sheets Connection
-conn= st.connection("gsheets", type=GSheetsConnection)
+#conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards",ttl=5)
-existing_data=existing_data.dropna(how='all')
-st.dataframe(existing_data)
+#existing_data= conn.read(worksheet="FoodWasteWizards",ttl=5)
+#existing_data=existing_data.dropna(how='all')
+#st.dataframe(existing_data)
 
 if "d2" not in st.session_state:
     st.session_state.d2 = False
