@@ -52,12 +52,12 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, aspiring Food Waste Wizard!**_  \n  \n_**Let's unlock the mysteries of reducing food waste, transforming your home into a magical realm of eco-consciousness**_</h1>", unsafe_allow_html=True)
 
 # Establishing a Google Sheets Connection
-conn= st.connection("gsheets", type=GSheetsConnection)
+#conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
-existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(26)), ttl=5)
-existing_data=existing_data.dropna(how='all')
-st.dataframe(existing_data)
+#existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(26)), ttl=5)
+#existing_data=existing_data.dropna(how='all')
+#st.dataframe(existing_data)
 
 # Initializing a session state variable called 'quiz' to False; pass the former to the st.button's 'quiz' parameter
 if "quiz" not in st.session_state:
@@ -140,19 +140,9 @@ col1, col2, col3 = st.columns([2,1,2])
 
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
-        user_data = pd.DataFrame(
-            [
-                {
-                    "user_id": st.session_state.user_id,
-                    "age": st.session_state.age,
-                    "continent": st.session_state.continent,
-                    "country": st.session_state.country,
-                    "gender_id": st.session_state.gender_id,
-                }
-            ]
-        )
-        updated_df = pd.concat([existing_data, user_data], ignore_index=True)
-        conn.update(worksheet="FoodWasteWizards", data=updated_df)
+        #user_data = pd.DataFrame([{"user_id": st.session_state.user_id,"age": st.session_state.age,"continent": st.session_state.continent,"country": st.session_state.country,"gender_id": st.session_state.gender_id,}])
+        #updated_df = pd.concat([existing_data, user_data], ignore_index=True)
+        #conn.update(worksheet="FoodWasteWizards", data=updated_df)
         switch_page('Question 1')
 
 # Read the value of the items in Session State
