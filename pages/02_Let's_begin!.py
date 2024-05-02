@@ -141,7 +141,7 @@ col1, col2, col3 = st.columns([2,1,2])
 with col2:
     if st.button("Let's go!", on_click=disable, disabled=st.session_state.quiz):
         df= pd.DataFrame(columns=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'])
-        existing_data=conn.create(worksheet="FoodWasteWizards", data=df)
+        existing_data=conn.create(worksheet="Wizards", data=df)
         #user_data = pd.DataFrame([{"user_id": st.session_state.user_id,"age": st.session_state.age,"continent": st.session_state.continent,"country": st.session_state.country,"gender_id": st.session_state.gender_id,}])
         #updated_df = pd.concat([existing_data, user_data], ignore_index=True)
         #conn.update(worksheet="FoodWasteWizards", data=updated_df)
