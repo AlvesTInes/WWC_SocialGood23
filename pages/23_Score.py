@@ -148,14 +148,11 @@ with col2:
              }
          ]
      )
-     df= pd.DataFrame(columns=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'])
-     excel_data=conn.update(worksheet="FoodWasteWizards", data=df)
-     existing_data= conn.read(worksheet="FoodWasteWizards",usecols=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'], ttl=5)
-     existing_data=existing_data.dropna(how='all')
      updated_df = pd.concat([existing_data, player_data], ignore_index=True)
      conn.update(worksheet="FoodWasteWizards", data=updated_df)
      st.write("**Thank you!**")
 
 st.dataframe(existing_data)
+
 # Read the value of the items in Session State
 #st.write(st.session_state)
