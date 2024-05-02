@@ -52,7 +52,11 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: white;'>  \n  \n_**Hello, aspiring Food Waste Wizard!**_  \n  \n_**Let's unlock the mysteries of reducing food waste, transforming your home into a magical realm of eco-consciousness**_</h1>", unsafe_allow_html=True)
 
 # Establishing a Google Sheets Connection
-#conn= st.connection("gsheets", type=GSheetsConnection)
+conn= st.connection("gsheets", type=GSheetsConnection)
+
+#Create an empty dataframe
+df= pd.DataFrame(columns=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'])
+existing_data=conn.update(worksheet="Food Waste Wizards", data=df)
 
 # Fetch existing data
 #existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(26)), ttl=5)
