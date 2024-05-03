@@ -112,10 +112,11 @@ with col2:
 
 space(lines=2)
 
+# Create a test input for user opinion
 user_opinion=st.text_input('**Please let us know what you think of our app!**, disabled=st.session_state.rate)
 
-def initialize_user_opinion():
-if 
+# Initializing the session state keys 'user_id'
+ 
 
 
 col1,col2,col3 = st.columns([2,1,2])
