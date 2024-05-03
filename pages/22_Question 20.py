@@ -114,7 +114,7 @@ with col1:
         switch_page('Question 19') 
     
 with col5:
-    open_modal = st.button('Finish Quiz!')
+    open_modal = st.button('See Result!')
 if open_modal:
     if not st.session_state.Question19:
         with modal.container():
