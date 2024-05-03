@@ -46,7 +46,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 add_page_title() 
 
 # Establishing a Google Sheets Connection
-conn= st.connection("gsheets", type=GSheetsConnection)
+#conn= st.connection("gsheets", type=GSheetsConnection)
 
 #Create an empty dataframe
 #df= pd.DataFrame(columns=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'])
@@ -54,8 +54,8 @@ conn= st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing data
 #existing_data= conn.read(worksheet="FoodWasteWizards",usecols=['user_id','age', 'continent', 'country','gender_id', 'score_1','score_2','score_3','score_4','score_5','score_6','score_7','score_8','score_9','score_10','score_11','score_12','score_13','score_14','score_15','score_16','score_17','score_18','score_19','score_20', 'rating'], ttl=5)
-existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(27)), ttl=5)
-existing_data=existing_data.dropna(how='all')
+#existing_data= conn.read(worksheet="FoodWasteWizards",usecols=list(range(27)), ttl=5)
+#existing_data=existing_data.dropna(how='all')
 #existing_data=conn.update(worksheet="FoodWasteWizards", data=existing_data)
 
 # Calculate the total score of the user, by summing all of the session state scores
@@ -112,7 +112,7 @@ with col2:
 
 col1,col2,col3 = st.columns([2,1,2])
 with col2:
- End_button=st.button('End Quiz',on_click=disable, disabled=st.session_state.rate) 
+ End_button=st.button('Finish Quiz!',on_click=disable, disabled=st.session_state.rate) 
 
 col1,col2,col3 = st.columns([1,5,1])
 with col2:
