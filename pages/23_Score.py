@@ -112,9 +112,9 @@ with col2:
 
 space(lines=2)
 # Create a test input for user opinion
-user_opinion=st.text_input('**Please let us know what you think of our app!**, disabled=st.session_state.rate)
+user_opinion=st.text_input('**Please let us know what you think of our app!**', disabled=st.session_state.rate)
 
-# Initializing the session state keys 'user_id'
+# Initializing the session state keys 'user_opinion'
 def initialize_user_opinion():
     if ('user_opinion' not in st.session_state) and (user_opinion != ''):
         st.session_state.user_opinion = user_opinion
@@ -164,9 +164,10 @@ with col2:
                  #"score_20": st.session_state.score_20,
                  #"rating": st.session_state.rating,
                  #"total_score": st.session_state.total_score,
-             }
-         ]
-     )
+                 #"user_opinion": st.session_state.user_opinion,
+             #}
+         #]
+     #)
      #updated_df = pd.concat([existing_data, player_data], ignore_index=True)
      #conn.update(worksheet="FoodWasteWizards", data=updated_df)
      st.write("**Thank you!**")
