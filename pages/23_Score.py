@@ -142,7 +142,7 @@ with col2:
                                    "score_11": st.session_state.score_11,"score_12": st.session_state.score_12,"score_13": st.session_state.score_13,"score_14": st.session_state.score_14,"score_15": st.session_state.score_15,
                                    "score_16": st.session_state.score_16,"score_17": st.session_state.score_17,"score_18": st.session_state.score_18,"score_19": st.session_state.score_19,"score_20": st.session_state.score_20,
                                    "rating": st.session_state.rating,"total_score": st.session_state.total_score,"user_opinion": st.session_state.user_opinion,}])
-     updated_df=pd.concat([existing_data, player_data]), ignore_index=True)
+     updated_df=pd.concat([existing_data, player_data], ignore_index=True)
      conn.update(worksheet="FoodWasteWizards", data=updated_df)
      col1,col2,col3 = st.columns([2,1,2])
      with col2:
