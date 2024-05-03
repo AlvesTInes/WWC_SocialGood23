@@ -111,14 +111,22 @@ with col2:
  rating = st.radio("label",[1, 2, 3, 4, 5],index=None, horizontal=True,label_visibility="collapsed",captions=["⭐","⭐⭐","⭐⭐⭐","⭐⭐⭐⭐","⭐⭐⭐⭐⭐"],key='rating', on_change=update_star_rating, disabled=st.session_state.rate)
 
 space(lines=2)
-
 # Create a test input for user opinion
 user_opinion=st.text_input('**Please let us know what you think of our app!**, disabled=st.session_state.rate)
 
 # Initializing the session state keys 'user_id'
- 
+def initialize_user_opinion():
+    if ('user_opinion' not in st.session_state) and (user_opinion != ''):
+        st.session_state.user_opinion = user_opinion
+        
+def update_opinion():
+    if'user_opinion' in st.session_state:
+        st.write()
+  
+initialize_user_opinion()
+update_opinion() 
 
-
+space(lines=2)
 col1,col2,col3 = st.columns([2,1,2])
 with col2:
  End_button=st.button('Finish Quiz!',on_click=disable, disabled=st.session_state.rate) 
