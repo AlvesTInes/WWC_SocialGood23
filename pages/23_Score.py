@@ -134,7 +134,7 @@ with col2:
 col1,col2,col3 = st.columns([1,5,1])
 with col2:
  if End_button:
-     col1,col2,col3 = st.columns([1,5,1])
+     col1,col2,col3 = st.columns([2,1,2])
      with col2:
          st.warning("***Thank you!***")   
      #player_data = pd.DataFrame(
