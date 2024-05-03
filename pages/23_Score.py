@@ -139,6 +139,7 @@ with col2:
  if End_button:
      with modal.container():
          st.markdown("***Thank you!***")
+         
      #player_data = pd.DataFrame(
          #[
              #{
