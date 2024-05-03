@@ -172,7 +172,7 @@ with col2:
      #conn.update(worksheet="FoodWasteWizards", data=updated_df)
      st.write("**Thank you!**")
 
-st.dataframe(existing_data)
+#st.dataframe(existing_data)
 
 # Read the value of the items in Session State
 st.write(st.session_state)
