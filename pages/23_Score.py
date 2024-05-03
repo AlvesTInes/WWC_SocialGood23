@@ -110,6 +110,14 @@ with col2:
  st.write("**We value your feedback. Please take a moment to rate our app!**")
  rating = st.radio("label",[1, 2, 3, 4, 5],index=None, horizontal=True,label_visibility="collapsed",captions=["⭐","⭐⭐","⭐⭐⭐","⭐⭐⭐⭐","⭐⭐⭐⭐⭐"],key='rating', on_change=update_star_rating, disabled=st.session_state.rate)
 
+space(lines=2)
+
+user_opinion=st.text_input('**Please let us know what you think of our app!**, disabled=st.session_state.rate)
+
+def initialize_user_opinion():
+if 
+
+
 col1,col2,col3 = st.columns([2,1,2])
 with col2:
  End_button=st.button('Finish Quiz!',on_click=disable, disabled=st.session_state.rate) 
