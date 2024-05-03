@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
+from streamlit_modal import Modal
 from st_pages import add_page_title
 from streamlit_space import space
 import base64
@@ -131,9 +132,13 @@ col1,col2,col3 = st.columns([2,1,2])
 with col2:
  End_button=st.button('Finish Quiz!',on_click=disable, disabled=st.session_state.rate) 
 
+modal=Modal("Finish", key="demo_modal")
+
 col1,col2,col3 = st.columns([1,5,1])
 with col2:
  if End_button:
+     with modal.container():
+         st.markdown("***Thank you!***")
      #player_data = pd.DataFrame(
          #[
              #{
@@ -170,7 +175,6 @@ with col2:
      #)
      #updated_df = pd.concat([existing_data, player_data], ignore_index=True)
      #conn.update(worksheet="FoodWasteWizards", data=updated_df)
-     st.write("**Thank you!**")
 
 #st.dataframe(existing_data)
 
