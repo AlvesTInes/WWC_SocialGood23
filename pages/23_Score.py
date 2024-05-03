@@ -175,4 +175,4 @@ with col2:
 st.dataframe(existing_data)
 
 # Read the value of the items in Session State
-#st.write(st.session_state)
+st.write(st.session_state)
