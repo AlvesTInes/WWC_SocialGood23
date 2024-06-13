@@ -1,0 +1,26 @@
+user_id,age,continent,country,gender_id,score_1,score_2,score_3,score_4,score_5,score_6,score_7,score_8,score_9,score_10,score_11,score_12,score_13,score_14,score_15,score_16,score_17,score_18,score_19,score_20,rating,total_score,user_opinion
+Inês Alves,26,Europe,Portugal,Female,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,20,"Incredible app, fun and entertaining!"
+Ivo,26,Europe,Portugal,Male,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,3,17,"Good app, but the user experience can improve"
+Anita Pereira,23,Europe,Portugal,Female,0,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,4,13,"Amazing experience. The app could have other features, such as let the user try again"
+Paulo Alves,49,Africa,Mozambique,Male,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,3,The app itself is pretty basic. The questions are a bit hard and the descriptions could be better
+Elisângela Tavares,44,South America,Brazil,Prefer not to say,1,1,0,0,0,0,0,0,1,1,0,1,1,1,1,0,1,0,1,1,5,11,The questions are good and the explanations given are super helpful. 
+Manuela Alves,26,Europe,Portugal,Female,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,1,5,16,Great app! Interesting questions
+John,22,North America,United States,Male,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,2,15,"The app is terrible, pretty basic. Don't recommend"
+Jean,33,Europe,France,Male,1,0,0,0,0,0,0,1,0,0,1,0,0,1,1,1,1,1,1,1,4,10,"The questions are good, a bit difficult for me. "
+Joana Salgado,21,Europe,Portugal,Female,0,0,1,0,1,1,0,1,1,1,1,0,0,1,1,0,1,0,1,1,4,12,Good app! Really fun and engaging
+Sara,42,Europe,Spain,Female,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,3,17,The features could be better
+Miguel,24,Europe,Portugal,Male,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,4,19,offers a diverse range of challenging questions that keep you engaged and learning
+Daiana,35,South America,Brazil,Female,0,0,0,1,0,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,4,11,offers a fun way to reinforce learning and discover new facts
+Ellen,16,South America,Brazil,Female,1,0,1,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,2,16,lack of variety of question formats makes the game a bit repetitive and boring
+Afonso,17,Europe,Portugal,Prefer not to say,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,4,19,the app has a good presentation it is visually appealing and enjoyable to play
+Evelyn,21,South America,Brazil,Female,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,0,1,1,1,1,4,13,the feedbacks given at the end of the questions are extremely insightful
+Greta,14,Europe,Germany,Female,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,3,17,"good, but quite simple. I think it should include more tips on how to reduce food waste, though"
+Pedro,22,Europe,Portugal,Male,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,4,15,It offers thought-provoking questions that challenge and entertain users
+Amber,25,Oceania,Australia,Female,1,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,2,6,"question feedback is often vague, providing little assistance"
+Daniel,28,Europe,Portugal,Male,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,3,14,it's okay
+Suzana,50,North America,Canada,Prefer not to say,1,1,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1,1,4,11,"the questions are good, some are a bit hard. The topics covered are relevant "
+Paula,52,Europe,Italy,Female,0,0,1,0,1,1,1,1,0,0,0,1,1,0,1,0,1,1,1,1,3,12,"good questions, but the game lacks interactivity. A bit boring"
+Teresa,24,North America,Mexico,Female,0,1,1,0,0,0,1,1,0,1,0,0,1,0,0,1,0,0,0,1,2,8,"too long, 20 questions is too much"
+Tati,26,Asia,Japan,Female,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,1,0,4,16,I liked it. Simple but good app
+Stephanie,28,Europe,Luxembourg,Female,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,4,18,user-friendly interface of Food Waste Wizards makes it easy for players of  to dive into the game
+Simão,24,Europe,Portugal,Male,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,2,4,"Questions are hard often feel repetitive, with limited variety and predictable patterns. Leaves the game feeling stale and unexciting"
