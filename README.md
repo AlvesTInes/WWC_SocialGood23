@@ -31,6 +31,12 @@ Are you ready to explore the realm of food waste and sustainability? Join us as 
 
 *Thank you!* 
 
+## Data Visualization and Sentiment Analysis 📊
+
+To evaluate the performance of our project, a connection was created with Google Sheets in order to capture user data and create a database. The data captured is a set of real data (authorized by the users) and fictitious data, so that we could evaluate the app's performance and understand the users' opinion of the quiz. The data visualization and sentiment analysis are just an exercise and are not intended to draw any real conclusions.
+
+You can view our Looker Studio dashboard [here](https://lookerstudio.google.com/reporting/603b1414-6fff-498a-9ad3-864fe96c23d5).
+
 ## Food Waste Wizard's Team
 
 🧙‍♀️ [Inês Alves](http://www.linkedin.com/in/inêstavaresalves) - *Team Lead* | Python, Machine Learning<br>
